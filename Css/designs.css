@@ -1,0 +1,339 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  padding: 2px;
+  background-color: whitesmoke;
+}
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 7px;
+}
+:root {
+  --beige-color: wheat;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--beige-color);
+  height: 12.1vh;
+}
+header nav {
+  margin-top: 10px;
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  background-color: beige;
+  padding-inline: 3cm;
+  height: 9vh;
+  width: 97%;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+nav .navigations {
+  display: flex;
+  gap: 2rem;
+}
+.navigations menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+nav menu a:hover {
+  text-decoration: underline;
+  text-decoration-color: orange;
+}
+
+nav .nav-buttons {
+  display: flex;
+}
+
+#hero {
+  padding-top: 1rem;
+  display: flex;
+  height: 90vh;
+  width: 100%;
+  background-color: wheat;
+  position: relative;
+}
+
+#hero .welcome-text {
+  font-size: 1rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-inline: 6rem;
+  width: 50%;
+}
+#hero .welcome-text h2 {
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#hero button {
+  color: white;
+  background-color: black;
+  padding: 9px 3rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
+  border-radius: 6px;
+}
+#hero button:hover {
+  color: black;
+  background-color: gray;
+}
+#hero .hero-img {
+  width: 60%;
+  padding: 10px;
+  background: url(/Images/hero-removebg-preview.png) no-repeat center;
+  border-radius: 50%;
+  transition: 1s;
+  box-shadow: 4px 4px 4px 4px beige;
+}
+.hero-img:hover {
+  background-color: beige;
+}
+#categories {
+  padding-top: 4rem;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(238, 213, 165);
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 370px) {
+  nav{
+    display: none;
+  }
+  #hero {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+
+    .hero-img{
+      width: 70%;
+      height: auto;
+      display: none;
+      background-color: green;
+    }
+
+    .welcome-text{
+      width: 30%;
+    }
+  }
+
+
+  
+  #categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+}
+#categories .category {
+  height: fit-content;
+  width: 19rem;
+  background-color: rgb(221, 200, 161);
+  border-radius: 20px;
+  transition: 1s;
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px;
+  /* text-align: center; */
+}
+.category-img {
+  background-color: wheat;
+  height: 300px;
+  background-image: url(../Images/fancyShoes.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.category:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+  box-shadow: 2px 2px 2px grey;
+}
+.category-title {
+  background-color: wheat;
+  text-align: center;
+  padding: 10px;
+}
+.category-img3 {
+  height: 300px;
+  background-image: url(../Images/Women\ clothin.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.category-img2 {
+  background-color: orange;
+  height: 300px;
+  background-image: url(../Images/luxury\ watches.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#exclusives {
+  height: 110vh;
+  width: 100%;
+  background-color: var(--beige-color);
+  font-family: "Courier New", Courier, monospace;
+  padding-top: 4.5rem;
+  text-align: center;
+  color: orange;
+}
+#exclusives h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+#exclusives ul {
+  display: flex;
+  list-style: none;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 50;
+}
+
+#exclusives article {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+article .exclusive-item {
+  margin-top: 2rem;
+  height: fit-content;
+  width: 19rem;
+  /* background-color: rgb(221, 200, 161); */
+  background-color: beige;
+  border-radius: 20px;
+  transition: 0.8s;
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+.exclusive-item:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 2px 2px 2px grey;
+}
+
+.exclusive-item-img {
+  background: url(../Images/jacket.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+.exclusive-item-img2 {
+  background: url(../Images/Skirts.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+.exclusive-item-img3 {
+  background: url(../Images/Sleek\ Caps.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+#exclusives button {
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: orange;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#Blogs {
+  height: 100vh;
+  width: 100%;
+  background-color: wheat;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid beige;
+  padding-top: 4rem;
+}
+#Blogs .blog {
+  width: 50rem;
+  height: 13rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: beige; */
+  padding: 10px;
+  gap: 1rem;
+  font-family: cursive;
+  border-radius: 20px;
+  transition: 0.6s;
+  box-shadow: 3px 3px 3px grey;
+
+  cursor: pointer;
+}
+.blog:hover {
+  background-color: rgb(223, 158, 37);
+  color: white;
+}
+.blog:active {
+  opacity: 0.8;
+}
+.blog .blog-img {
+  background: url(../Images/pexels-bobbydimas-27116557.jpg) center;
+  background-size: cover;
+  width: 30%;
+  height: 100%;
+  border-radius: 20px;
+}
+.blog .blog-title {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blog .blog-img2 {
+  background: url(../Images/pexels-mart-production-7679463.jpg) center;
+  background-size: cover;
+  width: 30%;
+  height: 100%;
+  border-radius: 20px;
+}
