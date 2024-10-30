@@ -33,7 +33,7 @@ header nav {
   display: flex;
   justify-content: space-between;
   background-color: beige;
-  padding-inline: 3cm;
+  padding-inline: 1cm;
   height: 9vh;
   width: 97%;
   align-items: center;
@@ -62,6 +62,9 @@ nav menu a:hover {
 
 nav .nav-buttons {
   display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 #hero {
@@ -162,7 +165,7 @@ nav .nav-buttons {
   width: 19rem;
   background-color: rgb(221, 200, 161);
   border-radius: 20px;
-  transition: 1s;
+  transition: 0.6s;
   font-family: "Courier New", Courier, monospace;
   padding: 10px;
   /* text-align: center; */
@@ -308,7 +311,8 @@ article .exclusive-item {
 
   cursor: pointer;
 }
-.blog:hover {
+.blog:hover
+ {
   background-color: rgb(223, 158, 37);
   color: white;
 }
